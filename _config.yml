@@ -10,12 +10,3 @@ description: RWBUPT的博客
 # baseurl: "" # the subpath of your site, e.g. /blog/
 # url: "http://yourdomain.com" # the base hostname & protocol for your site
 github_username: RWBUPT
-permalink: /:year/:month/:day/:title/
-# Build settings
-markdown: kramdown
-
-# highlight
-# 本地用rouge, github上用pygments
-# highlighter: pygments
-# highlighter: rouge
-# highlighter: false
