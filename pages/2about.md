@@ -1,4 +1,4 @@
----
+﻿---
 layout: page
 title: About
 permalink: /about/
@@ -7,17 +7,7 @@ icon: glyphicon-heart
 
 ### 关于我
 
-> 2015年我将步入找工作的大潮，希望做一个前端开发工程师。   
-
-在校硕士研究生一枚，就读于西安交通大学软件工程专业，2016年毕业。   
-
-主要兴趣集中在前端开发，大前端的概念深入我心。将更多的业务逻辑放在前端中，这很有趣。同时，将自己构想的内容实现出来，这种感觉很愉快。   
-
-热爱美好的事物，热爱摇滚乐，组过乐队，卖过唱。
-
-很喜欢崔健的歌词：现实像块石头，精神像个蛋，石头虽然坚硬，可蛋里才是生命。   
-
-还有，学习是一个非常愉快的过程。共同加油！   
+> 2015年我
 
 ---
 
@@ -27,8 +17,6 @@ icon: glyphicon-heart
 * QQ：793940046
 * Weibo：[Haoyang](http://weibo.com/3115521wh)
 * 知乎：[Gaohaoyang](http://www.zhihu.com/people/gaohaoyang)
-* 豆瓣：[Gaohaoyang](http://www.douban.com/people/42525035/)
-* 豆瓣音乐人：[浩阳的小站](http://site.douban.com/haoyangaiyinyue/)
 
 ---
 
@@ -50,13 +38,3 @@ icon: glyphicon-heart
 通过搭建这个静态博客，学到最多的就是 Git 的语法了，现在对 Git 的操作越来越熟练了。  
 
 ---
-
-#### 友情链接
-
-[羡辙杂俎](http://zhangwenli.com/blog) \| [Anotherhome](https://www.anotherhome.net) \| [Reverland](http://reverland.org/) \| [ZhiLi](http://lizhipower.github.io/) \| [Simmer](http://simmer-jun.github.io/) \| [awthink](http://awthink.net/) \| [Aralic](http://aralic.github.io/)
-
-Comment below to exchange link with me.  
-
----
-
-只要有空一定会更新的！
