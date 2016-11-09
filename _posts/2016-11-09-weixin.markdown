@@ -4,7 +4,7 @@ title:  "【转】微信应用号教程"
 date:   2016-11-09 20:31:50
 categories: JavaScript
 ---
-微信新推出的应用号，mark一个网上的教程【来自伯乐在线】  
+微信新推出的应用号，mark一个网上的教程【来自伯乐在线】 ： 
 http://blog.jobbole.com/106049/  
 http://blog.jobbole.com/106098/  
 http://blog.jobbole.com/106107/  
