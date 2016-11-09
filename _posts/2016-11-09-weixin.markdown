@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "重新弄了个模板"
+date:   2016-09-29 12:55:00
+categories: JavaScript
+---
+微信新推出的应用号，mark一个网上的教程
+http://blog.jobbole.com/106049/
+http://blog.jobbole.com/106098/
+http://blog.jobbole.com/106107/
+http://blog.jobbole.com/106105/
+http://blog.jobbole.com/106162/
