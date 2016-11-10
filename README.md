@@ -1,16 +1,25 @@
-# jekyll-simple
+White Paper
+============
 
-## simple
-simple is a theme designed for blogger using static site generator like jekyll, Hexo etc.
+White Paper is a jekyll theme for tech blogs. It is clean and simple with good semantic
+structure.
 
-Especially for those who writes in both Chinese and English. The font-type setting looks really good when writers use Chinese mixed with English.
+![white-paper image](https://i.cloudup.com/rmZjQ83vRh-2000x2000.png)
 
-Supposedly, this could work with Japanese as well but never had a chance to try.
+## Usage:
 
-## Story behind this theme
+- Install Jekyll from here(http://jekyllrb.com/)
+- Fork the project.
+- Change the fields in _config.yml.
+- Change the links in header.html.
+- Change the favicons in images/favicons and favico.ico.
 
-It has been long that using font with Chinese in web was a tedious and time-consuming work. It would be almost impossible to make different OS or devices to look the same.
+Test the website live while editing the code:
 
-iOS 9 has pulished some new fonts in Chinese and I decided to make one theme that looks good on iOS devices, at the same time, making it acceptable on computers using other fonts.
+```sh
+jekyll server --watch
+```
 
-So mobile goes first, then the macOS.
+## Issues:
+
+Report issues or feature request [here](https://github.com/vinitkumar/white-paper/issues).
