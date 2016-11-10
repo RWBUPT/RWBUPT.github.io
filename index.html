@@ -1,54 +1,44 @@
 ---
 layout: default
-index: true
 ---
-
-
-        <div class="row">
-            <div class="col-md-1"></div>
-            <div class="col-md-7">
-              <!-- Blog Post Links -->
-              <div class="blog-post-small">
-                {% for post in site.posts %}
-                  <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-                  <p><i class="fa fa-calendar"></i> &nbsp;{{ post.date | date: "%b %-d, %Y" }} | {% if site.disqus_short_name and page.comments != false and site.disqus_show_comment_count == true %}
-         <a href="{% if page.index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">Comments</a>
-        {% endif %}</p>
-                  {% if post.content contains '<!-- more -->' %}
-                    <p>{{ post.content | split:'<!-- more -->' | first }}
-                      <br><br>
-                      <a href="{{ post.url }}"class="btn btn-primary btn-sm">Read More</a>
-                    </p>
-                  {% else %}
-                    {{ post.content }}
-                  {% endif %}
-                {% endfor %}
-              </div>
-              <!-- End Blog Post Links -->
-            </div>
-            <!-- SideBar -->
-            <div class="col-md-3">
-              {% if site.feedburner_username %}
-               <div class="panel panel-primary" style="margin-top:10%;">
-                  <div class="panel-body">
-                    
-                     <form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri={{site.feedburner_username}}', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
-                        <div class="input-group">
-                        <input type="text" class="form-control" name="email"/>
-                        <input type="hidden" value="maangalabs" name="uri"/>
-                        <input type="hidden" name="loc" value="en_US"/>
-                        <span class="input-group-btn">
-                          <input type="submit" class="btn btn-primary" value="Subscribe Us" />
-                        </span>
-                      </div>
-                      <p><a href="http://feeds.feedburner.com/{{site.feedburner_username}}"><img style="margin-left:auto;margin-right:auto;" src="http://feeds.feedburner.com/~fc/{{site.feedburner_username}}?bg=007196&amp;fg=FFFFFF&amp;anim=1" height="26" width="88" style="border:1;" alt="" /></a></form>
-
-                  </div>
-
+<div class="col-sm-12">
+    <div class="page">
+        {% for post in site.posts %}
+            {% if post.archive == false %}
+            <div class="page-item">
+                <div class="col-sm-8">
+                    <ul class="page-item-title">
+                        <li><time class="timeago meta" datetime="{{ post.date |  date: "%A %-d %B %Y" }}">{{ post.date }}</time>
+                        <a class="meta pull-right comments-meta" href="{{ post.url | prepend: site.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>
+                        <li><a class="title" href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></li>
+                    </ul>
                 </div>
-                {% endif %}
+                <div class="col-sm-4 hide-on-phone">
+                    <ul class="page-item-title pull-right meta">
+                        <li><a href="{{ post.url | prepend: site.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>
+                        <li><a href="{{ post.url | prepend: site.url }}">more <i class="fa fa-ellipsis-h"></i></a></li>
+                        <li><a class="pib-indicator">gist <i class="fa fa-expand"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 page-item-body">
+                    {{post.excerpt}}
+                </div>
             </div>
-            <!-- End Sidebar -->
-            <div class="col-md-1"></div>
-         </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<script>
+$(document).ready(function() {
+    $(".page").children().first().find(".page-item-body").css( "display", "block" );
+    $(".page").children().first().find(".pib-indicator")
+        .find("i").toggleClass("fa-compress").toggleClass("fa-expand");
 
+    $(".page-item .pib-indicator").click(function() {
+        var preview = $(this);
+        preview.find("i").toggleClass("fa-expand").toggleClass("fa-compress");
+        $(this).closest(".page-item").find(".page-item-body").toggle("slow", function() {});
+    });
+});
+</script>
