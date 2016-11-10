@@ -1,88 +1,16 @@
-# Naringu
+# jekyll-simple
 
+## simple
+simple is a theme designed for blogger using static site generator like jekyll, Hexo etc.
 
-Naringu is dark jekyll theme that provide fully furnished jekyll setup, come with contact form, #6DD HTML color schema, and more features. It's based on [Poole](http://getpoole.com), the Jekyll butler.
+Especially for those who writes in both Chinese and English. The font-type setting looks really good when writers use Chinese mixed with English.
 
-![Naringu](images/screenshot-1.png)
-![Naringu](images/screenshot-2.png)
-![Naringu](images/screenshot-3.png)
-![Naringu](images/screenshot-4.png)
+Supposedly, this could work with Japanese as well but never had a chance to try.
 
-## Contents
+## Story behind this theme
 
-- [Usage](#usage)
- - [Sidebar menu](#sidebar-menu)
-  - [Themes](#themes)
-  - [Reverse layout](#reverse-layout)
-  - [Contact Form](#contact-form)
-  - [Comments](#comments)
-- [Development](#development)
-  - [Author](#author)
-  - [Contributors](#contributors)
-- [License](#license)
+It has been long that using font with Chinese in web was a tedious and time-consuming work. It would be almost impossible to make different OS or devices to look the same.
 
+iOS 9 has pulished some new fonts in Chinese and I decided to make one theme that looks good on iOS devices, at the same time, making it acceptable on computers using other fonts.
 
-## Usage
-
-Just download and start the Jekyll server or fork this repo.
-
-### Sidebar menu
-
-Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
-
-```
----
-layout: page
-title: About
----
-```
-
-**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` 
-
-
-### Reverse layout
-
-Reverse the page orientation with a single class.
-
-```html
-<body class="layout-reverse">
-  ...
-</body>
-```
-### Contact Form
-
-Using formspree to enable contact form in static site.
-
-Go a head `contact/index.html` just change the email in the code
-
-```html
-<form action="http://formspree.io/youremail@yourdomain.com" role="form" method="POST">
-```
-
-### Comments
-
-Using [disqus](http://disqus.com/) to enable comments in static site.
-
-Just edit variable `disqus` in `_config.yml` to your disqus link.
-
-## Development
-
-Naringu come with two branches :.
-
-- `master` for active development. 
-- `gh-pages` for preview of Naringu
-
-### Author
-
-**Rizky Ariestiyansyah**
-- <https://github.com/ariestiyansyah>
-- <https://twitter.com/ariestiyansyah>
-
-### Contributors
-
-**Gildásio Júnior** - *a.k.a. @gjuniioor*
-- https://github.com/gjuniioor
-
-## License
-
-Open sourced under the [MIT license](LICENSE.md).
+So mobile goes first, then the macOS.
