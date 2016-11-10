@@ -1,30 +1,12 @@
+<footer class="footer" role="contentinfo">
+	<div class="container">
+		<p class="copyright">Copyright &copy; 2014-{{ site.time | date: '%Y' }} <a href="{{site.resume_site}}"><code>{{ site.author }}</code></a>.</p>
+		<p>Powered by <a href="http://jekyllrb.com">Jekyll</a>, theme from <a href="http://lesscss.cn/">Less</a></p>
+	</div>
+</footer>
 
-{% if paginator %}
-<!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a href="/page{{paginator.next_page}}" class="older"><span class="mega-octicon octicon-playback-rewind" style="min-width: 32px;"></span></a>
-  {% else %}
-    <span class="next"><span class="mega-octicon octicon-playback-rewind" style="min-width: 32px;"></span></span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a href="/" class="newer"><span class="mega-octicon octicon-playback-fast-forward" style="min-width: 32px;"></span></a>
-    {% else %}
-      <a href="/page{{paginator.previous_page}}" class="newer"><span class="mega-octicon octicon-playback-fast-forward" style="min-width: 32px;"></span></a>
-    {% endif %}
-  {% else %}
-    <span class="previous"><span class="mega-octicon octicon-playback-fast-forward" style="min-width: 32px;"></span></span>
-  {% endif %}
-</div>
-{%  endif %}
-<script type="text/javascript">
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', '{{site.google_analytics}}']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+<script src="{{ '/styles/js/jquery.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/styles/js/bootstrap.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/styles/js/holder.min.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/styles/js/application.js' | prepend: site.baseurl }}"></script>
+<script src="{{ '/styles/js/lessismore.js' | prepend: site.baseurl }}"></script>
