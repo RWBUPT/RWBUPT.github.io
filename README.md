@@ -1,32 +1,88 @@
-﻿# About
+# Naringu
 
-This is my blog based on jekyll. And I change the style and interactive. If you want to use this model of the blog. **Please give a star at this repository**. Then you can clone it as your blog model.
 
-You can visit [here](http://gaohaoyang.github.io) to see this blog.
+Naringu is dark jekyll theme that provide fully furnished jekyll setup, come with contact form, #6DD HTML color schema, and more features. It's based on [Poole](http://getpoole.com), the Jekyll butler.
 
+![Naringu](images/screenshot-1.png)
+![Naringu](images/screenshot-2.png)
+![Naringu](images/screenshot-3.png)
+![Naringu](images/screenshot-4.png)
+
+## Contents
+
+- [Usage](#usage)
+ - [Sidebar menu](#sidebar-menu)
+  - [Themes](#themes)
+  - [Reverse layout](#reverse-layout)
+  - [Contact Form](#contact-form)
+  - [Comments](#comments)
+- [Development](#development)
+  - [Author](#author)
+  - [Contributors](#contributors)
+- [License](#license)
+
+
+## Usage
+
+Just download and start the Jekyll server or fork this repo.
+
+### Sidebar menu
+
+Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
+
+```
 ---
+layout: page
+title: About
+---
+```
 
-这是我的博客，基于 jekyll。我改了所有默认的样式和交互。如果你想使用这个博客模板。**请先在这个仓库上点个star吧**，这也是对我的肯定和鼓励，谢谢了。然后你可以克隆这个仓库用作你自己的博客。
-
-博客访问地址：[点击这里](http://gaohaoyang.github.io)
-
-**使用时请注明模板来源:  Jekyll theme by [Gaohaoyang](https://github.com/Gaohaoyang/gaohaoyang.github.io)**
-
-<!--
-
-## 被引用信息
-
-使用了我的模板并写明来源的人：   
-
-* [dreamholy](http://dreamholy.github.io/)
-
-没有注明来源的人：
-
-* [yangshuailing](http://yangshuailing.github.io/com/)
-* [huapu728](http://huapu728.github.io/)
-* [greatbuger](http://greatbuger.github.io/) 
+**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` 
 
 
--->
+### Reverse layout
 
+Reverse the page orientation with a single class.
 
+```html
+<body class="layout-reverse">
+  ...
+</body>
+```
+### Contact Form
+
+Using formspree to enable contact form in static site.
+
+Go a head `contact/index.html` just change the email in the code
+
+```html
+<form action="http://formspree.io/youremail@yourdomain.com" role="form" method="POST">
+```
+
+### Comments
+
+Using [disqus](http://disqus.com/) to enable comments in static site.
+
+Just edit variable `disqus` in `_config.yml` to your disqus link.
+
+## Development
+
+Naringu come with two branches :.
+
+- `master` for active development. 
+- `gh-pages` for preview of Naringu
+
+### Author
+
+**Rizky Ariestiyansyah**
+- <https://github.com/ariestiyansyah>
+- <https://twitter.com/ariestiyansyah>
+
+### Contributors
+
+**Gildásio Júnior** - *a.k.a. @gjuniioor*
+- https://github.com/gjuniioor
+
+## License
+
+Open sourced under the [MIT license](LICENSE.md).
