@@ -1,44 +1,62 @@
 ---
 layout: default
+title: Home
 ---
-<div class="col-sm-12">
-    <div class="page">
-        {% for post in site.posts %}
-            {% if post.archive == false %}
-            <div class="page-item">
-                <div class="col-sm-8">
-                    <ul class="page-item-title">
-                        <li><time class="timeago meta" datetime="{{ post.date |  date: "%A %-d %B %Y" }}">{{ post.date }}</time>
-                        <a class="meta pull-right comments-meta" href="{{ post.url | prepend: site.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>
-                        <li><a class="title" href="{{ post.url | prepend: site.url }}">{{ post.title }}</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-4 hide-on-phone">
-                    <ul class="page-item-title pull-right meta">
-                        <li><a href="{{ post.url | prepend: site.url }}#disqus_thread">0 <i class="fa fa-comments-o fa-lg"></i></a></li>
-                        <li><a href="{{ post.url | prepend: site.url }}">more <i class="fa fa-ellipsis-h"></i></a></li>
-                        <li><a class="pib-indicator">gist <i class="fa fa-expand"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-12 page-item-body">
-                    {{post.excerpt}}
-                </div>
-            </div>
-            {% endif %}
-        {% endfor %}
-    </div>
-</div>
-<script>
-$(document).ready(function() {
-    $(".page").children().first().find(".page-item-body").css( "display", "block" );
-    $(".page").children().first().find(".pib-indicator")
-        .find("i").toggleClass("fa-compress").toggleClass("fa-expand");
 
-    $(".page-item .pib-indicator").click(function() {
-        var preview = $(this);
-        preview.find("i").toggleClass("fa-expand").toggleClass("fa-compress");
-        $(this).closest(".page-item").find(".page-item-body").toggle("slow", function() {});
-    });
-});
-</script>
+<div class="home">
+  <div class="post-list">
+
+    {% for post in site.posts limit:5%}
+
+    <article class="post_card post">
+      <header class="post_header">
+        <h2 class="post_title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title}}</a></h2>
+        <time class="post_date">{{ post.date | date: "%d %B %Y, %A" }}</time>
+      </header>
+      <div class="post_excerpt">
+        <p>
+          {% if post.description %}
+          {{ post.description}}
+          {% else %}
+          {{ post.excerpt }}
+          {% endif %} 
+          <a class="read-more" href="{{ post.url | prepend: site.baseurl }}"> »  </a>
+        </p> 
+      </div>
+      <footer class="post_meta">
+
+
+        {% if post.location %}
+        <span class="author-location">
+          <div data-icon="ei-location"></div>
+          <a href=https://www.google.com/maps/place/{{post.location}}">{{ post.location }}</a>
+        </span>
+        {% endif %}
+        <!--
+        {% for category in post.categories %}
+        <a href="{{"/category/" | append: category | prepend: site.baseurl }}">
+          <data data-icon="ei-archive"></data>
+          {{category}}</a>
+        {% endfor %}
+        -->
+
+        <!--
+        {% if post.author %}
+        <span class="author_meta">
+          <img src="{{site.baseurl}}/assets/img/{{post.author}}.jpg"></img>
+          <span>David Lin</span>
+        </span>
+        {% endif %}
+        -->
+
+        <!--p class="readmore">
+          <a href=""><data data-icon="ei-arrow-right"></data>Read this article  </a>
+        </p-->
+      </footer>
+      <hr/>
+    </article>
+    {% endfor %}
+
+    <div class="pagination older-post"><a href="./archive"><data data-icon="ei-arrow-right"></data> Archive  </a></div>
+  </div>
+</div>

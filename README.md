@@ -1,44 +1,16 @@
-![favicon](https://raw.github.com/iamnii/wangana/master/favicon.png) Wangana - Jekyll Theme
-==============
+# jekyll-simple
 
-Wangana is responsive [Jekyll](http://jekyllrb.com/) theme, perfect for powering your GitHub hosted blog. Created with love by [iamnii](https://twitter.com/_iamnii).
+## simple
+simple is a theme designed for blogger using static site generator like jekyll, Hexo etc.
 
-* Demo [here](http://iamnii.github.io/wangana/)
+Especially for those who writes in both Chinese and English. The font-type setting looks really good when writers use Chinese mixed with English.
 
-## Screenshot
-![screenshot](https://raw.github.com/iamnii/wangana/master/assets/images/wangana.png)
+Supposedly, this could work with Japanese as well but never had a chance to try.
 
-## Contributing
-1. Fork the theme ( https://github.com/iamnii/wangana/fork ) The `master` branch is for development and pull requests. The `gh-pages` branch is for the demo page; don't bother.
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+## Story behind this theme
 
-## Issues
-[Open](https://github.com/iamnii/wangana/issues/new) issues if you run into trouble or have suggestions. Pull Requests always welcome.
+It has been long that using font with Chinese in web was a tedious and time-consuming work. It would be almost impossible to make different OS or devices to look the same.
 
-## Installation & Usage
-1 > [Download](https://github.com/iamnii/wangana/archive/master.zip) package
+iOS 9 has pulished some new fonts in Chinese and I decided to make one theme that looks good on iOS devices, at the same time, making it acceptable on computers using other fonts.
 
-2 > Fill in the details of the configuration file (/_config.yml) by uncommenting the differents and edit to taste
-Edit: _config.yml (general options), main.css (theme colors & fonts)
-``` bat
-wangana/
-├── _config.yml
-├── _assets/
-    ├── _scss/
-        ├── main.scss
-```
-
-3 > Run locally with the following commands while in the root directory and view in a browser at localhost:4000
-``` bat
-$ jekyll build
-# Compile and build site files
-
-$ jekyll serve --watch
-# Serve site locally
-```
-
-## Copyright & License
-The MIT License (MIT), Copyright (c) 2014 Nii Adjetey Sowah. [Read full document.](LICENSE)
+So mobile goes first, then the macOS.
