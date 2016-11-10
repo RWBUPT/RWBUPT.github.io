@@ -1,25 +1,13 @@
-White Paper
-============
+# Architect theme
 
-White Paper is a jekyll theme for tech blogs. It is clean and simple with good semantic
-structure.
+This is the raw HTML and styles that are used for the *Architect* theme on [GitHub Pages](http://pages.github.com/).
 
-![white-paper image](https://i.cloudup.com/rmZjQ83vRh-2000x2000.png)
+![](http://cl.ly/image/1x0Q3213330G/content)
 
-## Usage:
+# Using with Jekyll
 
-- Install Jekyll from here(http://jekyllrb.com/)
-- Fork the project.
-- Change the fields in _config.yml.
-- Change the links in header.html.
-- Change the favicons in images/favicons and favico.ico.
+If you'd like to use this theme with Jekyll, Pietro Menna has put together a package to make it easy. You can find it at https://github.com/pietromenna/jekyll-architect-theme
 
-Test the website live while editing the code:
+# License
 
-```sh
-jekyll server --watch
-```
-
-## Issues:
-
-Report issues or feature request [here](https://github.com/vinitkumar/white-paper/issues).
+This work is licensed under a [Creative Commons Attribution 4.0 International](http://creativecommons.org/licenses/by/4.0/).
