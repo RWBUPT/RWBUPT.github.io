@@ -1,6 +1,11 @@
 ---
 layout: post
 title:  "牛顿迭代法"
-date:   2017-03-01 22:54:30
-categories: JavaScript
+date:   2017-03-01 23:03:22
+categories: Interview
 ---
+
+* content
+{:toc}
+
+#开方的实现（不能使用库函数）
