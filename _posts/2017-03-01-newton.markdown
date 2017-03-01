@@ -8,4 +8,4 @@ categories: Interview
 * content
 {:toc}
 
-#开方的实现（不能使用库函数）
+开方的实现（不能使用库函数）
