@@ -2,4 +2,5 @@
 layout: post
 title:  "牛顿迭代法"
 date:   2016-11-09 20:31:50
+categories: Java
 ---
