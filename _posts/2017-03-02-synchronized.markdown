@@ -83,6 +83,7 @@ synchronized (类.Class) {   //类锁
     //code block
 }
 ```
+
 > 注意：同一个类的对象锁和类锁互不干涉。
 
 
