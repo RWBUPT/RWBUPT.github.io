@@ -39,6 +39,6 @@ double sqrt(double a,double e) {
 
 著名的**辗转相除法**也是牛顿迭代法的一种：[戳我](http://www.cnblogs.com/newpanderking/archive/2011/07/25/2116323.html)
 
-注意：牛顿迭代法不适用于函数有多个零点或函数不连续的情况。
+> 注意：牛顿迭代法不适用于函数有多个零点或函数不连续的情况。
 
 另一种适用于求解此类题目的算法称为最速下降法：[戳我](http://www.codelast.com/%e5%8e%9f%e5%88%9b-%e5%86%8d%e8%b0%88-%e6%9c%80%e9%80%9f%e4%b8%8b%e9%99%8d%e6%b3%95%e6%a2%af%e5%ba%a6%e6%b3%95steepest-descent/)
