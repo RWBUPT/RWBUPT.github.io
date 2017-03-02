@@ -20,7 +20,7 @@ categories: Interview
 
 对于给定的数a，开平方问题即为求方程f(x)=x^2-a的根k。
 
-此时f'(x)=2x，则对于x→k，有f'(k)=f(x)-f(k)/(f'(x)-f'(k))，k~x-f(x)/f'(x)=(x+a/x)/2
+此时f'(x)=2x，则对于x→k，有f'(k)=f(x)-f(k)/(f'(x)-f'(k))，**k~x-f(x)/f'(x)=(x+a/x)/2**
 
 代码实现如下：
 ```cpp
@@ -36,7 +36,7 @@ double sqrt(double a,double e) {
 ```
 若问题改为开n次方，则求解公式为k~((n-1)x^n+A)/nx^n
 
-著名的辗转相除法也是牛顿迭代法的一种：[戳我](http://www.cnblogs.com/newpanderking/archive/2011/07/25/2116323.html)
+著名的**辗转相除法**也是牛顿迭代法的一种：[戳我](http://www.cnblogs.com/newpanderking/archive/2011/07/25/2116323.html)
 
 注意：牛顿迭代法不适用于函数有多个零点或函数不连续的情况。
 
