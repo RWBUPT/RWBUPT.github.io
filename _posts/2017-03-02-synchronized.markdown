@@ -37,6 +37,7 @@ for (long i = 0;i < 100000000;i++){
 ```
 
 **锁的相关概念**
+
 - 可重入锁：一个线程在获取某个锁后，还可以继续获取该锁（通过关联一个请求计数），对于不同线程则相当于普通的互斥锁。它可以避免死锁。ReentrantLock和synchronized都是可重入锁。案例[戳我](http://blog.csdn.net/ns_code/article/details/17014135) 
 - 公平锁（new ReentrantLock(true)）：线程按照申请锁的先后顺序来获得锁。保障线程不饿死，但效率低。
 - 悲观锁：假定会发生并发冲突，屏蔽一切可能违反数据完整性的操作。 
@@ -82,7 +83,7 @@ synchronized (类.Class) {   //类锁
     //code block
 }
 ```
-**注意：同一个类的对象锁和类锁互不干涉。**
+> 注意：同一个类的对象锁和类锁互不干涉。
 
 
 ## synchronized与ReentrantLock的区别
