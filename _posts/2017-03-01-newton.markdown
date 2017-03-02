@@ -8,4 +8,29 @@ categories: Interview
 * content
 {:toc}
 
-开方的实现（不能使用库函数）
+##开平方的实现（不能使用库函数）
+这道题我大概一年前见过，当时用二分逼近勉强做出来，虽然知道肯定还有效率更高解法但也没深究。
+最近又看到这道题，讨论区有人提到牛顿迭代这种方法，因此就大致理解了一下这种解法。
+牛顿迭代法用于求各种方程（尤其是没有求根公式的高阶方程）的近似解，直观来说就是不断求切线的过程：
+在待求方程f(x)=0上任选一点，作出方程曲线在该点的切线，再过切线与x轴的交点作垂直于x轴的垂线，该垂线与方程曲线的交点即为下一个待处理点，如此往复直到所取x值满足精度为止。
+
+对于给定的数a，开平方问题即为求方程f(x)=x^2-a的根k。
+此时f'(x)=2x，则对于x→k，有f'(k)=f(x)-f(k)/(f'(x)-f'(k))，k~x-f(x)/f'(x)=(x+a/x)/2
+代码实现如下：
+```cpp
+double sqrt(double a,double e) { 
+    if(x < 0) return -1;   //no negative numbers returned in normal situations
+    if(x == 0) return 0;   
+    double res = 1; 
+    while(abs(res*res - a) > e){    
+        res = (res + a / res) / 2;   
+    } 
+ return res;  
+ }  
+```
+若问题改为开n次方，则求解公式为k~((n-1)x^n+A)/nx^n
+著名的辗转相除法也是牛顿迭代法的一种：[戳我](http://www.cnblogs.com/newpanderking/archive/2011/07/25/2116323.html)
+
+注意：牛顿迭代法不适用于函数有多个零点或函数不连续的情况。
+
+另一种适用于求解此类题目的算法称为最速下降法：[戳我](http://www.codelast.com/%e5%8e%9f%e5%88%9b-%e5%86%8d%e8%b0%88-%e6%9c%80%e9%80%9f%e4%b8%8b%e9%99%8d%e6%b3%95%e6%a2%af%e5%ba%a6%e6%b3%95steepest-descent/)
