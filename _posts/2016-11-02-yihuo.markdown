@@ -1,0 +1,39 @@
+---
+layout: post
+title:  "异或的小把戏"
+date:   2016-11-02 16:58:30
+categories: Interview
+---
+一道求斐波那契数列第n项的小题，解法大概是这样：
+
+```cpp
+#include <iostream>
+using namespace std;  
+ int main()
+ {  
+int n,a=1,b=1;  
+cout<<"Please input n:"<<endl;
+cin>>n;
+for(int i=0;i<n-1;i++)
+{
+    a =a + b; 
+   // 交换
+    a =a ^ b;  
+    b =b ^ a;
+    a =a ^ b;
+}
+cout<<b<<endl;  
+return 0;
+ }
+```
+中间那三行代码其实就是实现swap(a,b)的功能，当时我还有点困惑于为什么要把位运算拉出来
+
+后来在一本书上看到了类似的题目：不创造额外的变量，直接交换两个变量的值，其中一种就是这个方法。
+
+另一种方法如下：
+
+```cpp
+a = a - b;
+b = a + b;
+a = b - a;
+```
