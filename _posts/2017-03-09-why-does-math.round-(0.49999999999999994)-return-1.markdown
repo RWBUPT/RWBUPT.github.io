@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "why does math.round (0.49999999999999994) return 1？"
-date:   2017-03-02 11:14:54
+date:   2017-03-09 21:26:54
 categories: Java
 ---
 
