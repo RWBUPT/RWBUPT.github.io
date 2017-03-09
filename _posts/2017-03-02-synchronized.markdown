@@ -2,7 +2,7 @@
 layout: post
 title:  "synchronized与Lock"
 date:   2017-03-02 11:14:54
-categories: Interview
+categories: Java
 ---
 
 两种线程同步机制的总结整理。

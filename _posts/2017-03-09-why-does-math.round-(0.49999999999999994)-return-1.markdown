@@ -2,7 +2,7 @@
 layout: post
 title:  "why does math.round (0.49999999999999994) return 1？"
 date:   2017-03-09 21:26:54
-categories: Github
+categories: Java
 ---
 
 给[stackoverflow-java-top-qa项目](https://github.com/giantray/stackoverflow-java-top-qa)提交的一个小文档，但是那个负责人似乎消失了，github也很久没更新了，就同时传到自己这边来了。
