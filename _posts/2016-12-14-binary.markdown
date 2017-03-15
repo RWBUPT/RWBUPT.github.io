@@ -12,7 +12,7 @@ categories: Leetcode
 
 Leetcode编号191[戳我](https://leetcode.com/problems/Number-of-1-Bits/?tab=Description)
 
-最容易想到的**移位判断法**代码如下：
+最容易想到的**①移位判断法**代码如下：
 
 ```cpp
 int Binary1(unsigned int n)
@@ -25,7 +25,7 @@ int Binary1(unsigned int n)
 ```
 时间消耗与n位数呈正相关。
 
-更快的方法是时间消耗与n中1的个数呈正相关的**快速法**，代码如下：
+更快的方法是时间消耗与n中1的个数呈正相关的**②快速法**，代码如下：
 ```cpp
 int Binary1(unsigned int n)
 {
@@ -36,7 +36,7 @@ int Binary1(unsigned int n)
 }
 ```
 
-如果不怕代码又臭又长，可以使用**查表法**，代码如下：
+如果不怕代码又臭又长，可以使用**③查表法**，代码如下：
 ```cpp
 int Binary1(unsigned int n)
 { 
@@ -67,10 +67,11 @@ table[i]表示i对应的八位二进制数中所含1的个数，题中给的数�
 
 如果不怕麻烦也可以建一个32X32的大数组，更快。
 
+> 
 
 下面两种算法体现了接近于掩码的思想：
 
-**平行算法**
+**④平行算法**
 
 使用自定义的mask将n的相邻位相加，迭代得到结果
 
@@ -98,7 +99,7 @@ int Binary1(unsigned int n)
 }
 ```
 
-**MIT HAKMEM算法**
+**⑤MIT HAKMEM算法**
 
 我真的给设计这个算法的人跪下了，怎么想到的？
 
