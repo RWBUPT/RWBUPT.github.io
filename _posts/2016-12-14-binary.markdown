@@ -8,7 +8,7 @@ categories: Leetcode
 {:toc}
 
 
-## 给出一个32位无符号整数，返回其二进制表示中1的个数
+## 给定一个32位无符号整数，返回其二进制表示中1的个数
 
 Leetcode编号191[戳我](https://leetcode.com/problems/Number-of-1-Bits/?tab=Description)
 
