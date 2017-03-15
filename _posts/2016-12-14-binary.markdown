@@ -106,4 +106,4 @@ int Binary1(unsigned int n)
 * [MIT HAKMEM算法分析](http://blog.csdn.net/msquare/article/details/4536388)
 
 最后给出一个微软提供的现成指令：
-* [_mm_popcnt_u32()](https://msdn.microsoft.com/zh-tw/LIbrary/bb514 083)
+* [_mm_popcnt_u32()](https://msdn.microsoft.com/zh-tw/LIbrary/bb514083(d=printer,v=vs.100))
