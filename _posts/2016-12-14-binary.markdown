@@ -17,10 +17,10 @@ Leetcode编号191[戳我](https://leetcode.com/problems/Number-of-1-Bits/?tab=De
 ```cpp
 int Binary1(unsigned int n)
 {
-    int c =0 ; 
-    for (c =0; n; n >>=1)
-        c += n &1 ;
-    return c ;
+    int c = 0 ; 
+    for (c = 0; n; n >>= 1)
+        c += n & 1 ;
+    return c;
 }
 ```
 时间消耗与n位数呈正相关。
@@ -29,10 +29,10 @@ int Binary1(unsigned int n)
 ```cpp
 int Binary1(unsigned int n)
 {
-    int c =0 ;
-    for (c =0; n!=0; ++c)
-        n &= (n -1) ;
-    return c ;
+    int c = 0 ;
+    for (c = 0; n != 0; ++c)
+        n &= (n - 1) ;
+    return c;
 }
 ```
 
@@ -60,7 +60,7 @@ int Binary1(unsigned int n)
         4, 5, 5, 6, 5, 6, 6, 7, 5, 6, 6, 7, 6, 7, 7, 8, 
     }; 
 
-    return table[n &0xff] +table[(n >>8) &0xff] +table[(n >>16) &0xff] +table[(n >>24) &0xff] ;
+    return table[n & 0xff]+table[(n >>8) & 0xff]+table[(n >>16) & 0xff]+table[(n >>24) & 0xff];
 }
 ```
 table[i]表示i对应的八位二进制数中所含1的个数，题中给的数是32位，所以用移位与运算提取四次，把每次得到的1的个数相加即为所求结果。
@@ -77,19 +77,19 @@ table[i]表示i对应的八位二进制数中所含1的个数，题中给的数�
 ```cpp
 int Binary1(unsigned int n) 
 { 
-    n = (n &0x55555555) + ((n >>1) &0x55555555) ; 
-    n = (n &0x33333333) + ((n >>2) &0x33333333) ; 
-    n = (n &0x0f0f0f0f) + ((n >>4) &0x0f0f0f0f) ; 
-    n = (n &0x00ff00ff) + ((n >>8) &0x00ff00ff) ; 
-    n = (n &0x0000ffff) + ((n >>16) &0x0000ffff) ; 
-    return n ; 
+    n = (n & 0x55555555) + ((n >>1) & 0x55555555) ; 
+    n = (n & 0x33333333) + ((n >>2) & 0x33333333) ; 
+    n = (n & 0x0f0f0f0f) + ((n >>4) & 0x0f0f0f0f) ; 
+    n = (n & 0x00ff00ff) + ((n >>8) & 0x00ff00ff) ; 
+    n = (n & 0x0000ffff) + ((n >>16) & 0x0000ffff) ; 
+    return n; 
 }
 ```
 它的改良版代码如下：
 ```cpp
 int Binary1(unsigned int n)
 {
-	n = n - ((n >> 1) & 0x55555555);
+	n = n - ((n >> 1) &  0x55555555);
 	n = (n & 0x33333333) + ((n >> 2) & 0x33333333);
 	n = (n + (n >> 4)) & 0x0f0f0f0f;
 	n = n + (n >> 8);
@@ -105,4 +105,4 @@ int Binary1(unsigned int n)
 * [MIT HAKMEM算法分析](http://blog.csdn.net/msquare/article/details/4536388)
 
 最后给出一个微软提供的现成指令：
-* [_mm_popcnt_u32()](https://msdn.microsoft.com/zh-tw/LIbrary/bb514083)
+* [_mm_popcnt_u32()](https://msdn.microsoft.com/zh-tw/LIbrary/bb514 083)
